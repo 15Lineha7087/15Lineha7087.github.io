@@ -29,7 +29,7 @@ function playSongShowPicture(e){
   //play the correct song 
   var pathToSong = "songs/";
   pathToSong += songs[index].song + ".mp3";
-  alert("Should be playing the chosen song: " + songs[index].song);  
+  alert("Playing the chosen song: " + songs[index].song);  
   player.src = pathToSong;
   player.play();
   
