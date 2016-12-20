@@ -1,7 +1,8 @@
+/*global songs*/
 var divs = document.getElementsByTagName('div');
 var boxes = document.getElementsByClassName('box');
 var choices = document.getElementById('choices');
-var pictures = document.getElementById('pictures');
+var picture = document.getElementById('picture');
 var player = document.getElementById('player');
 var songTitle = document.getElementById('songTitle');
 var app = divs[0];
@@ -22,13 +23,13 @@ function playSongShowPicture(e){
   var pathToPicture = "pictures/";
   var index = choices.selectedIndex;
   pathToPicture += songs[index].picture + ".png";
-  alert("should be playing the chosen song\namd show the right picture.");
   picture.style.background = "url(" + pathToPicture + ") no-repeat center";
   picture.style.backgroundSize = "100% 100%";
   
   //play the correct song 
   var pathToSong = "songs/";
-  pathToSong += songs[index].song + ".mp3"
+  pathToSong += songs[index].song + ".mp3";
+  alert("should be playing the chosen song: " + songs[index].song);  
   player.src = pathToSong;
   player.play();
   
